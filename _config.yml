@@ -1,15 +1,10 @@
 layout: sidebar
 style: light
 
-plugins:
-  - jekyll-octicons
-  - jekyll-github-metadata
-  - jemoji
-
 permalink: /:year/:month/:day/:title/
 domain: dulpyanghaobo.github.io      # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://dulpyanghaobo.github.io # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /hab/      # place folder name if the site is served in a subfolder
+baseurl:      # place folder name if the site is served in a subfolder
 defaults:
   -
     scope:
@@ -47,14 +42,41 @@ projects:
   # vk: your_username
   # website: http://your_website_url
   # youtube: your_username
+jekyll_admin:
+  hidden_links:
+    - posts
+    - pages
+    - staticfiles
+    - datafiles
+    - configuration
+  homepage: "pages"
+
+collections:
+  posts:
+    output: true
+    sidebar_label: News
 
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+  - name: 铲屎官大户
+    web_url: https://dulpyanghaobo.github.io/admin/pages/cat.html
+    image_url: https://dulp.oss-cn-beijing.aliyuncs.com/personal-website/DALL%C2%B7E%202023-11-03%2023.53.11%20-%20Illustration%20of%20the%20same%20Chinese%20male%20programmer%20during%20a%20break%2C%20sitting%20on%20the%20floor%20in%20a%20casual%20shirt%20and%20jeans.%20He%27s%20surrounded%20by%20high%20tech%20gadget.png
 
-  - name: Web design
+  - name: 读书
+    web_url: https://dulpyanghaobo.github.io/admin/pages/read.html
+    image_url: https://dulp.oss-cn-beijing.aliyuncs.com/personal-website/DALL%C2%B7E%202023-11-04%2001.36.36%20-%20Illustration%20of%20a%20Caucasian%20male%20programmer%20in%20his%20early%2030s%2C%20with%20short%20brown%20hair%20and%20a%20beard%2C%20sitting%20in%20a%20modern%20home%20office%20at%20night.%20The%20room%20is.png
 
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+
+  - name: 旅行
+    web_url: https://dulpyanghaobo.github.io/admin/pages/travel.html
+    image_url: https://dulp.oss-cn-beijing.aliyuncs.com/personal-website/DALL%C2%B7E%202023-11-03%2023.37.43%20-%20Illustration%20of%20an%20East%20Asian%20male%20programmer%20lounging%20in%20a%20spacious%20living%20room%20filled%20with%20natural%20light.%20He%20is%20reclining%20on%20a%20comfortable%20armchair%2C.png
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
+  - jekyll-admin
